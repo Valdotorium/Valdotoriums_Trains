@@ -22,8 +22,8 @@ async function initMod() {
             stats: {
                 maxAcceleration: 1,
                 maxDeceleration: 1.0,
-                maxSpeed: 39, //140kmh
-                maxSpeedLocalStation: 28,
+                maxSpeed: 33.3, //120kmh
+                maxSpeedLocalStation: 22.2,
                 capacityPerCar: 115,
                 carLength: 17.25,
                 minCars: 4,
@@ -33,7 +33,7 @@ async function initMod() {
                 trainWidth: 3.02,
                 minStationLength: 160,
                 maxStationLength: 400,
-                baseTrackCost: 50_000,
+                baseTrackCost: 60_000,
                 baseStationCost: 60_000_000,
                 trainOperationalCostPerHour: 750,
                 carOperationalCostPerHour: 75,
@@ -68,9 +68,9 @@ async function initMod() {
                 trainWidth: 2.4,
                 minStationLength: 60,
                 maxStationLength: 100,
-                baseTrackCost: 50_000,
+                baseTrackCost: 60_000,
                 baseStationCost: 12_000_000,
-                trainOperationalCostPerHour: 400,
+                trainOperationalCostPerHour: 500,
                 carOperationalCostPerHour: 30,
                 scissorsCrossoverCost: 10_000_000
             },
