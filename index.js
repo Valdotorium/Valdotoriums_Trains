@@ -36,7 +36,7 @@ async function initMod() {
                 baseTrackCost: 60_000,
                 baseStationCost: 60_000_000,
                 trainOperationalCostPerHour: 750,
-                carOperationalCostPerHour: 75,
+                carOperationalCostPerHour: 70,
                 scissorsCrossoverCost: 20_000_000
             },
             compatibleTrackTypes: ['S-Bahn', 'Tram-Train'],
@@ -69,9 +69,9 @@ async function initMod() {
                 minStationLength: 60,
                 maxStationLength: 100,
                 baseTrackCost: 60_000,
-                baseStationCost: 12_000_000,
-                trainOperationalCostPerHour: 500,
-                carOperationalCostPerHour: 30,
+                baseStationCost: 10_000_000,
+                trainOperationalCostPerHour: 300,
+                carOperationalCostPerHour: 40,
                 scissorsCrossoverCost: 10_000_000
             },
             compatibleTrackTypes: ['Tram'],
