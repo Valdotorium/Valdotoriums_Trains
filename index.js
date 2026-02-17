@@ -34,9 +34,9 @@ async function initMod() {
                 minStationLength: 160,
                 maxStationLength: 400,
                 baseTrackCost: 50_000,
-                baseStationCost: 40_000_000,
-                trainOperationalCostPerHour: 700,
-                carOperationalCostPerHour: 70,
+                baseStationCost: 60_000_000,
+                trainOperationalCostPerHour: 750,
+                carOperationalCostPerHour: 75,
                 scissorsCrossoverCost: 20_000_000
             },
             compatibleTrackTypes: ['S-Bahn', 'Tram-Train'],
@@ -46,7 +46,7 @@ async function initMod() {
             },
             elevationMultipliers: {
                 AT_GRADE: 0.4, 
-                ELEVATED: 1.8, 
+                ELEVATED: 1.6, 
                 CUT_AND_COVER: 1.2
             }
         },
@@ -68,8 +68,8 @@ async function initMod() {
                 trainWidth: 2.4,
                 minStationLength: 60,
                 maxStationLength: 100,
-                baseTrackCost: 40_000,
-                baseStationCost: 10_000_000,
+                baseTrackCost: 50_000,
+                baseStationCost: 12_000_000,
                 trainOperationalCostPerHour: 400,
                 carOperationalCostPerHour: 30,
                 scissorsCrossoverCost: 10_000_000
