@@ -55,9 +55,9 @@ async function initMod() {
             name: 'Tram',
             description: 'can cross streets, but is awfully slow. Modeled after Flexity Berlin.',
             stats: {
-                maxAcceleration: 0.75,
-                maxDeceleration: 1.0,
-                maxSpeed: 13, //50kmh, lowered because of mixed traffic
+                maxAcceleration: 0.8,
+                maxDeceleration: 1.1,
+                maxSpeed: 13.8, //50kmh, lowered because of mixed traffic
                 maxSpeedLocalStation: 11,
                 capacityPerCar: 50,
                 carLength: 5.5,
