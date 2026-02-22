@@ -57,7 +57,7 @@ async function initMod() {
             stats: {
                 maxAcceleration: 0.8,
                 maxDeceleration: 1.1,
-                maxSpeed: 13.8, //50kmh, lowered because of mixed traffic
+                maxSpeed: 16.8, //60kmh
                 maxSpeedLocalStation: 11,
                 capacityPerCar: 50,
                 carLength: 5.5,
@@ -68,10 +68,10 @@ async function initMod() {
                 trainWidth: 2.4,
                 minStationLength: 60,
                 maxStationLength: 100,
-                baseTrackCost: 60_000,
-                baseStationCost: 10_000_000,
-                trainOperationalCostPerHour: 350,
-                carOperationalCostPerHour: 35,
+                baseTrackCost: 65_000,
+                baseStationCost: 15_000_000,
+                trainOperationalCostPerHour: 260,
+                carOperationalCostPerHour: 30,
                 scissorsCrossoverCost: 5_000_000
             },
             compatibleTrackTypes: ['Tram'],
