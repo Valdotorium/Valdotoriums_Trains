@@ -1,3 +1,7 @@
+const CONFIG = {
+    MOD_NAME: 'Valdotoriums Trains'
+}
+
 function waitForAPI() {
     return new Promise((resolve) => {
         function check() {
@@ -11,14 +15,14 @@ function waitForAPI() {
 async function initMod() {
     try {
         const API = await waitForAPI();
-        console.log("Subway Builder API is ready:", API.version);
+        console.log(`[${CONFIG.MOD_NAME}] Subway Builder API is ready:`, API.version);
         // You can now use the API to interact with the game
 
         //add S-Bahn and Tram, and Tram train trains. Tram train is a tram interopable with Light Metro and S-Bahn lines. It can run on both types of tracks and can be used for both types of services.
         API.trains.registerTrainType({
             id: 'S-Bahn',
             name: 'S-Bahn',
-            description: 'High capacity commuter train for suburban and regional services.',
+            description: 'High-capacity commuter train for suburban and regional services.',
             stats: {
                 maxAcceleration: 0.95,
                 maxDeceleration: 1.15,
@@ -59,7 +63,7 @@ async function initMod() {
         API.trains.registerTrainType({
             id: 'Tram',
             name: 'Tram',
-            description: 'can cross streets, but is awfully slow. Modeled after Flexity Berlin.',
+            description: 'Slow but able to cross streets. Modeled after Flexity Berlin.',
             stats: {
                 maxAcceleration: 0.8,
                 maxDeceleration: 1.0,
@@ -142,14 +146,14 @@ async function initMod() {
 
 
         //register station types ?
-        API.ui.showNotification('valdotoriums Trains loaded successfully!', 'success')
+        API.ui.showNotification(`${CONFIG.MOD_NAME} loaded successfully!`, 'success')
     );
 
 
     } catch (error) {
-        console.error("Mod init error:", error);
+        console.error(`[${CONFIG.MOD_NAME}] Mod init error:`, error);
     }
 }
 
-console.log("Trains mod loading...");
+console.log(`[${CONFIG.MOD_NAME}] Trains mod loading...`);
 setTimeout(() => { initMod(); }, 100);
