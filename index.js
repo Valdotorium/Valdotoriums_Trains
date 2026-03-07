@@ -1,3 +1,7 @@
+const CONFIG = {
+    MOD_NAME: 'Valdotoriums Trains'
+}
+
 function waitForAPI() {
     return new Promise((resolve) => {
         function check() {
@@ -11,18 +15,18 @@ function waitForAPI() {
 async function initMod() {
     try {
         const API = await waitForAPI();
-        console.log("Subway Builder API is ready:", API.version);
+        console.log(`[${CONFIG.MOD_NAME}] Subway Builder API is ready:`, API.version);
         // You can now use the API to interact with the game
 
         //add S-Bahn and Tram, and Tram train trains. Tram train is a tram interopable with Light Metro and S-Bahn lines. It can run on both types of tracks and can be used for both types of services.
         API.trains.registerTrainType({
             id: 'S-Bahn',
             name: 'S-Bahn',
-            description: 'High capacity commuter train for suburban and regional services.',
+            description: 'High-capacity commuter train for suburban and regional services.',
             stats: {
-                maxAcceleration: 1,
-                maxDeceleration: 1.0,
-                maxSpeed: 33.3, //120kmh
+                maxAcceleration: 0.95,
+                maxDeceleration: 1.15,
+                maxSpeed: 35.8, // 129kmh | 80mph
                 maxSpeedLocalStation: 22.2,
                 capacityPerCar: 115,
                 carLength: 17.25,
@@ -35,10 +39,10 @@ async function initMod() {
                 maxStationLength: 400,
                 baseTrackCost: 60_000,
                 baseStationCost: 60_000_000,
-                trainOperationalCostPerHour: 750,
-                carOperationalCostPerHour: 70,
+                trainOperationalCostPerHour: 600,
+                carOperationalCostPerHour: 80,
                 scissorsCrossoverCost: 15_000_000,
-                stopTimeSeconds: 28,
+                stopTimeSeconds: 30,
                 maxLateralAcceleration: 1.2,
                 parallelTrackSpacing: 3.8,
                 trackClearance: 2,
@@ -59,25 +63,25 @@ async function initMod() {
         API.trains.registerTrainType({
             id: 'Tram',
             name: 'Tram',
-            description: 'can cross streets, but is awfully slow. Modeled after Flexity Berlin.',
+            description: 'Slow but able to cross streets. Modeled after Flexity Berlin.',
             stats: {
                 maxAcceleration: 0.8,
                 maxDeceleration: 1.0,
-                maxSpeed: 15.5, //~60kmh
+                maxSpeed: 15.5, // 56kmh | 35mph
                 maxSpeedLocalStation: 12,
                 capacityPerCar: 50,
                 carLength: 5,
                 minCars: 4,
                 maxCars: 8,
                 carsPerCarSet: 2,
-                carCost: 800_000,
+                carCost: 1_000_000,
                 trainWidth: 2.1,
                 minStationLength: 60,
                 maxStationLength: 100,
-                baseTrackCost: 32_500,
+                baseTrackCost: 50_000,
                 baseStationCost: 7_000_000,
-                trainOperationalCostPerHour: 240,
-                carOperationalCostPerHour: 20,
+                trainOperationalCostPerHour: 180,
+                carOperationalCostPerHour: 35,
                 scissorsCrossoverCost: 2_000_000,
                 stopTimeSeconds: 10,
                 maxLateralAcceleration: 2,
@@ -142,14 +146,14 @@ async function initMod() {
 
 
         //register station types ?
-        API.ui.showNotification('valdotoriums Trains loaded successfully!', 'success')
+        API.ui.showNotification(`${CONFIG.MOD_NAME} loaded successfully!`, 'success')
     );
 
 
     } catch (error) {
-        console.error("Mod init error:", error);
+        console.error(`[${CONFIG.MOD_NAME}] Mod init error:`, error);
     }
 }
 
-console.log("Trains mod loading...");
+console.log(`[${CONFIG.MOD_NAME}] Trains mod loading...`);
 setTimeout(() => { initMod(); }, 100);
