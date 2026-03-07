@@ -74,7 +74,7 @@ async function initMod() {
                 minCars: 4,
                 maxCars: 8,
                 carsPerCarSet: 2,
-                carCost: 750_000,
+                carCost: 1_000_000,
                 trainWidth: 2.1,
                 minStationLength: 50,
                 maxStationLength: 100,
