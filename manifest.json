@@ -2,9 +2,9 @@
     "id": "com.valdotorium.Trains",
     "name": "Valdotoriums Trains",
     "description": "Adds S-bahn trains for commuter rail, street running trams, and Tram-trains, interoperable on both types of tracks as well as light Metro.",
-    "version": "1.0.0",
+    "version": "1.1.3",
     "author": {
-        "name": "Valdotorium"
+        "name": "Valdotorium & Herschel"
     },
     "main": "index.js"
 }
